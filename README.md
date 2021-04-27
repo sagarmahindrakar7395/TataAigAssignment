@@ -1,9 +1,10 @@
 # TataAigAssignment
 Google map showing taxis between two cities.
 Project uses VIPER architecture.
-##Steps to run this project:
+#Steps to run this project:
 1. pod install
 2. open xcworkspace file and run 
+
 
 #Project highlights:
 1.Taxi List screen :
