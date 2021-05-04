@@ -12,7 +12,7 @@ import UIKit
 class PioListInteractor: PioListInteractorInputProtocol {
     
         weak var presenter: PioListInteractorOutputProtocol?
-    var networkManger = NetworkManger()
+        var networkManger = NetworkManger()
 
     func fetchData(completion: @escaping (MapModel) -> (), failure: @escaping (String) -> ()){
         networkManger.fetchData(url:nil,method:nil,completion: {[weak self] (response) in

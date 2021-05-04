@@ -15,9 +15,10 @@ protocol MapWireframeProtocol: class {
 }
 //MARK: Presenter -
 protocol MapPresenterProtocol: class {
-
+    var mapModel: MapModel {get set}
     var interactor: MapInteractorInputProtocol? { get set }
     var coordinate: Coordinate {get set}
+    func fetchUpdateData(_ coordinate:Coordinate)
     func updateMapView()
 }
 //MARK: Interactor -
@@ -29,6 +30,8 @@ protocol MapInteractorOutputProtocol: class {
 protocol MapInteractorInputProtocol: class {
 
     var presenter: MapInteractorOutputProtocol?  { get set }
+    func fetchUpdateData(url:String,completion: @escaping (MapModel) -> (),failure: @escaping (String)-> ())
+
 
     /* Presenter -> Interactor */
 }
@@ -37,6 +40,8 @@ protocol MapInteractorInputProtocol: class {
 protocol MapViewProtocol: class {
 
     var presenter: MapPresenterProtocol?  { get set }
+    func showError()
+    func updateData()
     func updateMapView(_ cordinates:[Coordinate]?,_ southwestCoordinate:Coordinate)
 
     /* Presenter -> ViewController */

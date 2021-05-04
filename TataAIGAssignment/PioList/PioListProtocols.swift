@@ -24,7 +24,6 @@ protocol PioListPresenterProtocol: class {
     func fetchData()
     func fetchUpdateData(_ coordinate:Coordinate)
     func goToDetailMapVC(_ coordinate:Coordinate)
-   // func goToDetailMapVC(_ coordinate:Coordinate,_ coordinateAll:[Coordinate],_ navigationController:UINavigationController )
 }
 
 //MARK: Interactor -
