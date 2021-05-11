@@ -17,6 +17,7 @@ class MapViewController: UIViewController, MapViewProtocol, GMSMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mapView.delegate = self
         presenter?.updateMapView()
         setupTitle()
     }
